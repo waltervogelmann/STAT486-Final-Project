@@ -53,3 +53,36 @@ Preliminary exploration of relationships between variables shows that artist-lev
 Scatterplots further reveal that the relationship between artist popularity and track popularity is positive but exhibits increasing variability at higher values, suggesting a non-linear or heteroskedastic pattern. In contrast, track duration and album size show little to no visible relationship with popularity.
 
 Overall, the data shows moderate variability and suggests that track popularity is influenced by a combination of factors rather than a single dominant predictor. These findings suggest that simple linear models may be insufficient, and more flexible approaches may be necessary.
+
+---
+
+## 4. Visual Exploration
+
+![Artist vs Track Popularity](./Artist_vs_Track_Popularity.png)
+
+What does it show?
+- This scatterplot shows a fairly positive relationship between artist popularity and track popularity. As artist popularity increases, track popularity generally increases as well.
+
+Why is it relevant?
+- This provides strong evidence that artist-level characteristics are important predictors of track success. However, on a larger scale, especially at higher artist popularity, it shows that even very popular artists can produce both high and low-performing tracks. This suggests that artist popularity alone is not sufficient to fully explain track popularity.
+
+
+![Track Popularity: Not Explicit vs Explicit](./Track_Popularity_Not_Explicit_vs_Explicit.png)
+
+What does it show?
+- This boxplot compares the distribution of track popularity for explicit and non-explicit songs.
+
+Why is it relevant?
+- This helps evaluate whether explicit content influences popularity. The distributions appear fairly similar, though the explicit songs have a smaller spread and a slightly higher median. This suggests that explicit content is potentially a determinant of track popularity, meaning content type may significantly drive listener engagement.
+
+---
+
+## 5. Challenges and Reflection
+
+One of the main challenges in this project was identifying a dataset that includes both track-level and artist-level variables in a clean and usable format. Many music datasets either focus only on audio features (such as tempo or energy) or only on artist metrics, making it difficult to study how these levels interact. 
+
+That being said, we anticipated this kind of issue when tackling a project such as this and so we made sure we could find a dataset that would work for the research questions we had in mind. The selected Spotify dataset was valuable because it integrates both perspectives, but finding such a comprehensive dataset required careful searching and evaluation.
+
+Another ongoing challenge is determining how to appropriately model the relationship between variables. Initial visualizations suggest that relationships—especially between artist popularity and track popularity—are non-linear and exhibit heteroskedasticity. This complicates the use of simple linear models and suggests that more flexible approaches (such as transformations or non-linear models) may be necessary.
+
+Additionally, while some variables show moderate relationships, many features appear only weakly associated with track popularity. This raises the challenge of identifying which variables truly contribute meaningful predictive power versus those that add noise. Moving forward, feature selection and model evaluation will be important steps in refining the analysis.
