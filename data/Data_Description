@@ -1,0 +1,15 @@
+Our data were pulled from a Kaggle dataset : https://www.kaggle.com/datasets/wardabilal/spotify-global-music-dataset-20092025
+
+As for the content, the data come from ene of the most well-known music streaming services in the world, Spotify, which offers comprehensive information about songs and artists.
+The data offer insights on how music trends, artist popularity, and genres have changed throughout time and features songs from 2009 to 2025.
+The information was extracted for analysis and education using Spotify's public API.
+It includes information at the track, artist, and album levels that can be used to investigate different facets of the music business.
+
+The two files, both of which are in this folder, are:
+
+spotify_data clean.csv:Modern tracks and recent artists (2025)
+track_data_final.csv:Classic and popular tracks from top artists (2009–2023)
+
+For initial exploratory data analysis, see eda.ipynb in the notebooks folder.
+
+*Written 03/28/2026 by Walter Vogelmann*
