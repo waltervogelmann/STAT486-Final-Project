@@ -33,3 +33,15 @@ This dataset contains track-level and artist-level metadata, including:
 - album characteristics
 
 This dataset is already cleaned and well-structured, making it suitable for modeling.
+
+---
+
+### Setup
+
+To install required packages, run:
+
+pip install -r requirements.txt
+
+If you are using uv, you can alternatively run:
+
+uv sync
