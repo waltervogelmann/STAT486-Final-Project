@@ -34,10 +34,13 @@ Additional hyperparameter tuning resulted in only minor improvements, indicating
 
 ## 4) Explainability and Interpretability
 
-To better understand model behavior, we examined feature importance from the Random Forest model. The most important features included artist popularity and artist followers, suggesting that an artist’s overall reach and recognition play a major role in determining track popularity.
+To better understand model behavior, we examined feature importance from the Random Forest model. The most important feature by a large margin was artist_impact, which is a feature we engineered as a combination of artist popularity and follower count. This suggests that a strong interaction between an artist’s reach and recognition plays the biggest role in predicting track popularity.
 
-This result is intuitive, as more popular artists are more likely to produce widely streamed tracks. Other features, such as track duration and album characteristics, contributed less but still provided additional predictive signal.
+After that, features such as album_total_tracks, track_duration_min, artist_popularity, and release_year all contributed moderately to the model. Interestingly, artist_followers and artist_followers_log were less important on their own, likely because their effect is already captured within the artist_impact feature.
 
+The explicit indicator had almost no importance, suggesting that whether a song is explicit does not meaningfully impact popularity in this dataset.
+
+Overall, these results align with intuition. Artist-level influence appears to dominate, while track-level characteristics provide additional but smaller predictive value.
 ---
 
 ## 5) Final Takeaways
