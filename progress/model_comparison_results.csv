@@ -1,4 +1,0 @@
-Model,Best Params,CV RMSE,Train RMSE,Test RMSE,Train R2,Test R2
-Random Forest,"{'model__max_depth': 15, 'model__max_features': 'sqrt', 'model__min_samples_leaf': 1, 'model__min_samples_split': 5, 'model__n_estimators': 400}",19.12333771866583,13.288007344823914,19.016918357077238,0.6848484962474894,0.3915348572992896
-Ridge Regression,"{'feature_select__k': 'all', 'model__alpha': 10}",20.41245169022878,20.38262395897121,20.644205633873256,0.2584851563868744,0.28294614914498395
-Linear Regression,{'feature_select__k': 'all'},20.41250145064056,20.382345048257278,20.645276161550353,0.25850544965429934,0.2828717800062569
