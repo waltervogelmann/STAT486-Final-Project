@@ -45,6 +45,7 @@ To further interpret model behavior, we used SHAP (SHapley Additive exPlanations
 ![SHAP_Bar_Graph.png](./SHAP_Bar_Graph.png)
 
 Overall, these results align with intuition. Artist-level influence appears to dominate, while track-level characteristics provide additional but smaller predictive value.
+
 ---
 
 ## 5) Final Takeaways
