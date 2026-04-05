@@ -6,7 +6,7 @@ The goal of this project is to predict Spotify track popularity using available 
 
 ## 2) Supervised Models Implemented
 
-We implemented several supervised learning models to compare performance across different approaches. All models were built using a preprocessing pipeline that handled missing values, scaled numeric features, and encoded categorical variables. We used 5-fold cross-validation during hyperparameter tuning and evaluated models using RMSE and R².
+We implemented several supervised learning models to compare performance across different approaches. All models were built using a preprocessing pipeline that handled missing values, scaled numeric features, and encoded categorical variables. We used an 80/20 train-test split, where model selection and hyperparameter tuning were performed using 5-fold cross-validation on the training set via GridSearchCV. Final performance was evaluated on the held-out test set using RMSE and R². RMSE was used to measure prediction error in the original popularity scale, while R² was used to assess the proportion of variance explained by each model.
 
 | Model | Key Hyperparameters | Test RMSE | Test R² |
 |------|--------------------|----------|--------|
@@ -39,6 +39,10 @@ To better understand model behavior, we examined feature importance from the Ran
 After that, features such as album_total_tracks, track_duration_min, artist_popularity, and release_year all contributed moderately to the model. Interestingly, artist_followers and artist_followers_log were less important on their own, likely because their effect is already captured within the artist_impact feature.
 
 The explicit indicator had almost no importance, suggesting that whether a song is explicit does not meaningfully impact popularity in this dataset.
+
+To further interpret model behavior, we used SHAP (SHapley Additive exPlanations) values on the Random Forest model. The SHAP summary plot confirmed that artist_impact was the most influential feature, consistently contributing positively to higher predicted popularity. Artist popularity and then album characteristics followed, showing smaller, mixed effects depending on their values. This analysis reinforces that artist-level features dominate predictions, while track-level features provide more nuanced contributions.
+
+![SHAP_Bar_Graph.png](./SHAP_Bar_Graph.png)
 
 Overall, these results align with intuition. Artist-level influence appears to dominate, while track-level characteristics provide additional but smaller predictive value.
 ---
