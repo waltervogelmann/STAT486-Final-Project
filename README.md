@@ -113,3 +113,6 @@ Bilal, Warda. *Spotify Global Music Dataset (2009–2025)*. Kaggle.
 * Contains **no personally identifiable information (PII)**
 * Data is aggregated at the track and artist level
 * Results may reflect **Spotify platform biases** (e.g., promotion, algorithmic exposure)
+
+
+Project by Dallin Robinson, Eric Coons, and Walter Vogelmann
