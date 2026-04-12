@@ -67,7 +67,7 @@ Run all cells from top to bottom. This notebook reproduces:
 | Gradient Boosting | 19.19     | 0.380     |
 | SVR               | 20.79     | 0.273     |
 
-👉 **Random Forest performed best**, capturing nonlinear relationships in the data.
+**Random Forest performed best**, capturing nonlinear relationships in the data.
 
 ---
 
