@@ -2,6 +2,8 @@
 
 We were curious if PCA would corroborate our results from SHAP. Despite not having many total features, we can still take note of any features we plan on using in the model that don't influence the most important PCs, and consider removing them in future analyses. 
 
+Given the low amount of features that we have, PCA may not be the best fit for an unsupervised learning method, but we were curious to see its results. K-means clustering is much more appropriate for our data, as will be explained below.
+
 Before running the PCA, we standardized the features we planned to use in the model, since we do not want features with higher numbers to have an outsized influence on our results.
 
 After running the PCA, the two most important principal components accounted for approximately 76% of the variance. If one of our features does not significantly contribute to either of these components, then we can reasonably say that it is less useful in explaining variance in the response variable.
