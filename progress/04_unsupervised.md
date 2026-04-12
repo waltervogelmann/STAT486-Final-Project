@@ -1,8 +1,35 @@
+## Additional Machine Learning Method: PCA
+
+We were curious if PCA would corroborate our results from SHAP. Despite not having many total features, we can still take note of any features we plan on using in the model that don't influence the most important PCs, and consider removing them in future analyses. 
+
+Before running the PCA, we standardized the features we planned to use in the model, since we do not want features with higher numbers to have an outsized influence on our results.
+
+After running the PCA, the two most important principal components accounted for approximately 76% of the variance. If one of our features does not significantly contribute to either of these components, then we can reasonably say that it is less useful in explaining variance in the response variable.
+
+![Scree Plot and Variance Explained](PCA_results.png)
+
+All the features in our current model seemed to contribute significantly to the 2 most important principal components. This tells us that those features are able to explain a significant portion of the variance in the response variable, and PCA does not support removing any of them in future analyses.
+
+### Principal Component 1
+|--------| Loading | Abs Loading
+|--------|---------|-------------|
+| Album Tracks | 0.670 | 0.670
+| Duration | 0.553 | 0.553 |
+| Artist Impact | 0.496 | 0.496
+
+### Principal Component 2
+|--------| Loading | Abs Loading
+|--------|---------|-------------|
+| Artist Impact | 0.766 | 0.670
+| Duration | -0.641 | 0.641 |
+| Album Tracks | -0.037 | 0.037|
+
+
 ## Additional Machine Learning Method: Clustering
 
 We applied k-means clustering to identify natural groupings of songs based on artist- and track-level characteristics. This method fits our research question because it allows us to explore structure in the data beyond just predicting popularity.
 
-For clustering, we selected the features `artist_impact`, `track_duration_min`, and `album_total_tracks`. The `artist_impact` feature was engineered as a combination of artist popularity and follower count and was the most important predictor in our supervised models. Including it here allows us to directly examine how artist-level influence shapes groups of songs.
+For clustering, we selected the features `artist_impact`, `track_duration_min`, and `album_total_tracks`. The `artist_impact` feature was engineered as a combination of artist popularity and follower count and was the most important predictor in our supervised models, and was a significant contributor in the most important PCs in our PCA analysis. Including it here allows us to directly examine how artist-level influence shapes groups of songs.
 
 We did not include both `artist_popularity` and `artist_followers` separately because they are highly correlated and already captured within `artist_impact`. Using redundant features can negatively affect K-means since it relies on distance calculations.
 
