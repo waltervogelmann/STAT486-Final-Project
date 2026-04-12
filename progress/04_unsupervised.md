@@ -1,12 +1,8 @@
 ## Additional Machine Learning Method: PCA
 
-We were curious if PCA would corroborate our results from SHAP. Despite not having many total features, we can still take note of any features we plan on using in the model that don't influence the most important PCs, and consider removing them in future analyses. 
+We were curious if PCA would corroborate our results from SHAP. Given the low amount of features that we have, PCA may not be the best fit for an unsupervised learning method, but we were curious to see its results. K-means clustering is much more appropriate for our data, as will be explained below.
 
-Given the low amount of features that we have, PCA may not be the best fit for an unsupervised learning method, but we were curious to see its results. K-means clustering is much more appropriate for our data, as will be explained below.
-
-Before running the PCA, we standardized the features we planned to use in the model, since we do not want features with higher numbers to have an outsized influence on our results.
-
-After running the PCA, the two most important principal components accounted for approximately 76% of the variance. If one of our features does not significantly contribute to either of these components, then we can reasonably say that it is less useful in explaining variance in the response variable.
+Before running the PCA, we standardized the features we planned to use in the model, since we do not want features with higher numbers to have an outsized influence on our results. After running it, the two most important principal components accounted for approximately 76% of the variance. If one of our features does not significantly contribute to either of these components, then we can reasonably say that it is less useful in explaining variance in the response variable.
 
 ![Scree Plot and Variance Explained](PCA_results.png)
 
@@ -57,3 +53,15 @@ The resulting clusters showed clear and interpretable patterns. One cluster cons
 ![Track Popularity by Cluster](track_popularity_by_cluster.png)
 
 These results reinforce our supervised findings that artist-level influence is the dominant driver of track popularity, while also revealing additional structure related to album characteristics.
+
+
+## Final Conclusions
+
+Artist level characteristics are most important in explaining song popularity
+- Popular artists with more followers tend to have much more popular
+songs
+
+Track level characteristics are less important in explaining song popularity, but
+are more within the control of artists
+- Longer songs tend to be a bit more popular
+- Songs in larger albums tend to be a bit less popularw
